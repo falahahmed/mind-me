@@ -1,7 +1,7 @@
 // hooks/useTabTitle.js
 import { useEffect, useRef } from 'react';
 
-export const useTabTitle = (hiddenTitle: string, emoji: string) => {
+export const useTabTitle = (hiddenTitles: string[], emoji: string) => {
   const originalTitle = useRef(document.title);
   const originalFavicon = createFavicon('😎')
   const newfavIcon = createFavicon(emoji);
@@ -9,6 +9,7 @@ export const useTabTitle = (hiddenTitle: string, emoji: string) => {
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.hidden) {
+        const hiddenTitle = Math.random() > 0.5 ? hiddenTitles[0] : hiddenTitles[1];
         document.title = hiddenTitle;
         changeFavicon(newfavIcon);
       } else {
@@ -22,31 +23,31 @@ export const useTabTitle = (hiddenTitle: string, emoji: string) => {
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, [hiddenTitle]);
+  }, [hiddenTitles]);
 };
 
 export const createFavicon = (emoji: string) => {
   const canvas = document.createElement('canvas');
   canvas.width = 32;
   canvas.height = 32;
-  
+
   const ctx = canvas.getContext('2d');
   if (ctx) {
     ctx.font = '24px serif';
     ctx.fillText(emoji, 4, 24);
   }
-  
+
   return canvas.toDataURL();
 };
 
 export const changeFavicon = (iconUrl: string) => {
   let favicon = document.querySelector("link[rel*='icon']") as HTMLLinkElement | null;
-  
+
   if (!favicon) {
     favicon = document.createElement('link') as HTMLLinkElement;
     favicon.rel = 'icon';
     document.head.appendChild(favicon);
   }
-  
+
   favicon.href = iconUrl;
 };

@@ -50,9 +50,8 @@ export default function Home() {
   const baseEmoji = createFavicon('😎');
   changeFavicon(baseEmoji);
 
-  const zeroConcernTabs: string[] = ["Do you even care?", "No care at all?"];
-  const tabTitle = Math.random() < 0.5 ? zeroConcernTabs[0] : zeroConcernTabs[1];
-  useTabTitle(tabTitle, "😒");
+  const tabTitles: string[] = ["Do you even care?", "No care at all?"];
+  useTabTitle(tabTitles, "😒");
 
   const [currentId, setCurrentId] = useState("start");
 
