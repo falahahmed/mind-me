@@ -2,10 +2,12 @@
 import { useEffect, useRef } from 'react';
 
 export const useTabTitle = (hiddenTitles: string[], emoji: string) => {
+  if(typeof document === 'undefined') return; // Prevent SSR error
+  const originalTitle = useRef(document.title);
+  const originalFavicon = createFavicon('😎')
+  const newfavIcon = createFavicon(emoji);
+
   useEffect(() => {
-    const originalTitle = useRef(document.title);
-    const originalFavicon = createFavicon('😎')
-    const newfavIcon = createFavicon(emoji);
     const handleVisibilityChange = () => {
       if (document.hidden) {
         const hiddenTitle = Math.random() > 0.5 ? hiddenTitles[0] : hiddenTitles[1];

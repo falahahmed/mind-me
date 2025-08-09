@@ -21,8 +21,6 @@ export default function Home() {
 
   const [currentId, setCurrentId] = useState("start");
 
-  console.log("Data fetched:", data);
-
   const currentNode = data?.nodes.find((node: any) => node.id === currentId);
 
   console.log("Current node: ", currentNode);
