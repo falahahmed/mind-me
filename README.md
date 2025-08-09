@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<img width="3188" height="1202" alt="frame (3)" src="scrnsht.png" />
 
-## Getting Started
 
-First, run the development server:
+# Mind Me 🎯
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## A website that calls for our attention
+### Team Name: Nakama
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Team Members
+- Team Lead: Falah - SOE Cusat
+- Member 2: Bantupalli Prudvi John - SOE Cusat
 
-## Learn More
+### Project Description
+The site asks some questions and gives response based on that. sometimes fun, sometimes helping :)
 
-To learn more about Next.js, take a look at the following resources:
+### The Problem (that doesn't exist)
+We are getting bored. Well, we were!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### The Solution (that nobody asked for)
+A preset website (I hoped for a larger dataset :\( ) to roast us. Ah well, maybe to motivate us
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technical Details
+### Technologies/Components Used
+For Software:
+- Typescript
+- Nextjs
 
-## Deploy on Vercel
+For Hardware:
+- My Laptop 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Implementation
+For Software:
+# Installation
+```pnpm i```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Run
+```pnpm dev```
+
+### Project Documentation
+For Software:
+
+# Screenshots (Add at least 3)
+![Screenshot1](/scrnsht.png)
+*When you say you want to go back*
+
+![Screenshot2](/titles.png)
+*How title changes when tabs are switched*
+
+![Screenshot3](/ques.png)
+*An exaple of question asked by the site*
+
+
+For Hardware:
+
+# My lap
+That's all I used. 
+
+### Project Demo
+
+# Additional Demos
+ [Check it here](mind-me.vercel.app)
+
+---
+Made with ❤️ at TinkerHub Useless Projects 
+
+![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
+![Static Badge](https://img.shields.io/badge/UselessProjects--25-25?link=https%3A%2F%2Fwww.tinkerhub.org%2Fevents%2FQ2Q1TQKX6Q%2FUseless%2520Projects)
+
+
