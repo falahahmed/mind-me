@@ -3,70 +3,122 @@
     {
       "id": "start",
       "type": "question",
-      "content": "What’s the first thing you did after waking up?",
+      "content": "Why didn't you visit me earlier?",
       "options": [
-        { "text": "Checked my phone", "next": ["roast_phone", "motivate_phone", "nonsense_phone"] },
-        { "text": "Brushed my teeth", "next": ["roast_teeth", "motivate_teeth", "nonsense_teeth"] },
-        { "text": "Went back to sleep", "next": ["roast_sleep", "motivate_sleep", "nonsense_sleep"] }
+        { "text": "I was busy with work", "next": ["work_response", "work_empathy", "work_playful"] },
+        { "text": "I didn't think you'd notice", "next": ["notice_response", "notice_empathy", "notice_playful"] },
+        { "text": "I was going through something", "next": ["struggle_response", "struggle_empathy", "struggle_playful"] }
       ]
     },
-
-    { "id": "roast_phone", "type": "message", "content": "Ah yes, doomscrolling — the breakfast of champions." },
-    { "id": "motivate_phone", "type": "message", "content": "Checking your phone early? That’s dedication… to staying informed." },
-    { "id": "nonsense_phone", "type": "message", "content": "Phones have more bacteria than toilet seats. Enjoy holding that." },
-
-    { "id": "roast_teeth", "type": "message", "content": "Brushed your teeth? Congrats on achieving the bare minimum today." },
-    { "id": "motivate_teeth", "type": "message", "content": "Clean teeth, clean mind. You’re unstoppable." },
-    { "id": "nonsense_teeth", "type": "message", "content": "Sharks grow new teeth forever. Feeling jealous yet?" },
-
-    { "id": "roast_sleep", "type": "message", "content": "Back to sleep? Bold strategy to avoid responsibilities." },
-    { "id": "motivate_sleep", "type": "message", "content": "Extra sleep? That’s self-care at expert level." },
-    { "id": "nonsense_sleep", "type": "message", "content": "Dolphins sleep with one eye open. Creepy, right?" },
 
     {
-      "id": "q2",
+      "id": "work_response",
       "type": "question",
-      "content": "Pick a snack:",
+      "content": "Work again? When was the last time you took a break?",
       "options": [
-        { "text": "Chips", "next": ["roast_chips", "motivate_chips", "nonsense_chips"] },
-        { "text": "Fruit", "next": ["roast_fruit", "motivate_fruit", "nonsense_fruit"] },
-        { "text": "Chocolate", "next": ["roast_chocolate", "motivate_chocolate", "nonsense_chocolate"] }
+        { "text": "I can't remember", "next": ["workaholic_roast", "workaholic_concern"] },
+        { "text": "I took a break last week", "next": ["break_adequate", "break_skeptical"] }
       ]
     },
-
-    { "id": "roast_chips", "type": "message", "content": "Chips? Just edible air with a crunch." },
-    { "id": "motivate_chips", "type": "message", "content": "Salty, crispy joy — you deserve it." },
-    { "id": "nonsense_chips", "type": "message", "content": "Some scientists once made a musical instrument out of chips." },
-
-    { "id": "roast_fruit", "type": "message", "content": "Fruit? Trying to convince yourself you’re healthy?" },
-    { "id": "motivate_fruit", "type": "message", "content": "Fruit is nature’s candy. Good choice." },
-    { "id": "nonsense_fruit", "type": "message", "content": "Bananas are berries but strawberries aren’t. Science is drunk." },
-
-    { "id": "roast_chocolate", "type": "message", "content": "Chocolate? Sweet escape from reality, huh?" },
-    { "id": "motivate_chocolate", "type": "message", "content": "Chocolate is proof the universe loves you." },
-    { "id": "nonsense_chocolate", "type": "message", "content": "White chocolate isn’t actually chocolate. It’s impostor sugar." },
+    {
+      "id": "work_empathy",
+      "type": "question",
+      "content": "I understand work can be overwhelming. Do you feel appreciated there?",
+      "options": [
+        { "text": "Not really", "next": ["unappreciated_support", "unappreciated_advice"] },
+        { "text": "Yes, but it's still draining", "next": ["drained_acknowledge", "drained_suggestion"] }
+      ]
+    },
+    {
+      "id": "work_playful",
+      "type": "question",
+      "content": "Too busy for me? Should I start charging for my time?",
+      "options": [
+        { "text": "I'd pay in memes", "next": ["meme_currency"] },
+        { "text": "You're priceless", "next": ["praise_accepted"] }
+      ]
+    },
 
     {
-      "id": "q3",
+      "id": "notice_response",
       "type": "question",
-      "content": "How’s your desk right now?",
+      "content": "You really think I wouldn't notice your absence?",
       "options": [
-        { "text": "Clean", "next": ["roast_clean", "motivate_clean", "nonsense_clean"] },
-        { "text": "Messy", "next": ["roast_messy", "motivate_messy", "nonsense_messy"] },
-        { "text": "I don’t have a desk", "next": ["roast_nodesk", "motivate_nodesk", "nonsense_nodesk"] }
+        { "text": "I didn't mean it like that", "next": ["clarify_feelings"] },
+        { "text": "You have so many friends", "next": ["friends_comparison"] }
+      ]
+    },
+    {
+      "id": "notice_empathy",
+      "type": "question",
+      "content": "Do you often feel overlooked in relationships?",
+      "options": [
+        { "text": "Sometimes", "next": ["overlooked_understanding"] },
+        { "text": "Not usually", "next": ["miscommunication_discussion"] }
+      ]
+    },
+    {
+      "id": "notice_playful",
+      "type": "question",
+      "content": "I notice everything. Like how you still haven't returned my favorite book.",
+      "options": [
+        { "text": "I lost it", "next": ["book_tragedy"] },
+        { "text": "I'm still 'reading' it", "next": ["book_excuses"] }
       ]
     },
 
-    { "id": "roast_clean", "type": "message", "content": "Clean desk? Are you okay? Blink twice if it’s a cry for help." },
-    { "id": "motivate_clean", "type": "message", "content": "A clean desk means a clean mind. You’re on fire." },
-    { "id": "nonsense_clean", "type": "message", "content": "In Japan, there’s a museum dedicated to dust. Maybe they’d like your desk’s leftovers." },
+    {
+      "id": "struggle_response",
+      "type": "question",
+      "content": "Do you want to talk about what you're going through?",
+      "options": [
+        { "text": "Not right now", "next": ["respect_boundaries"] },
+        { "text": "Maybe a little", "next": ["offer_support"] }
+      ]
+    },
+    {
+      "id": "struggle_empathy",
+      "type": "question",
+      "content": "I'm here when you're ready. Was it hard to reach out?",
+      "options": [
+        { "text": "Yes, I didn't want to burden you", "next": ["burden_reassurance"] },
+        { "text": "I just needed time", "next": ["time_respected"] }
+      ]
+    },
+    {
+      "id": "struggle_playful",
+      "type": "question",
+      "content": "Going through something? Was it the realization that pineapple belongs on pizza?",
+      "options": [
+        { "text": "That's not funny", "next": ["serious_moment"] },
+        { "text": "You're terrible at this", "next": ["failed_comfort"] }
+      ]
+    },
 
-    { "id": "roast_messy", "type": "message", "content": "Messy desk? That’s not creativity, that’s chaos." },
-    { "id": "motivate_messy", "type": "message", "content": "Messy desk, genius brain. Einstein vibes." },
-    { "id": "nonsense_messy", "type": "message", "content": "A study once linked messy desks to eating more cookies. Coincidence? No." },
-
-    { "id": "roast_nodesk", "type": "message", "content": "No desk? So you’re just balancing life on your lap now?" },
-    { "id": "motivate_nodesk", "type": "message", "content": "No desk, no limits. Freedom is yours." },
-    { "id": "nonsense_nodesk", "type": "message", "content": "In medieval times, people wrote while lying on their stomachs. Comfort over posture." }
+    { "id": "workaholic_roast", "type": "message", "content": "Even robots get maintenance breaks. You're worse than a machine.", "link": "https://imgflip.com/i/5w3v2r" },
+    { "id": "workaholic_concern", "type": "message", "content": "That's not healthy. Your worth isn't measured in productivity.", "link": "https://media1.tenor.com/m/rSq-9VeWmK0AAAAC/gun-hate.gif" },
+    { "id": "break_adequate", "type": "message", "content": "Good. Now schedule the next one before you forget again.", "link": "https://imgflip.com/i/1otk96" },
+    { "id": "break_skeptical", "type": "message", "content": "Was that break actually relaxing or just less work?", "link": "https://imgflip.com/i/5w3v2r" },
+    
+    { "id": "meme_currency", "type": "message", "content": "I accept payment in rare Pepes and vintage troll faces.", "link": "https://knowyourmeme.com/memes/pepe-the-frog" },
+    { "id": "praise_accepted", "type": "message", "content": "Damn right I am. Now visit more often.", "link": "https://imgflip.com/i/5w3v2r" },
+    
+    { "id": "clarify_feelings", "type": "message", "content": "Then help me understand. I care more than you think." },
+    { "id": "friends_comparison", "type": "message", "content": "Quantity ≠ quality. You're not interchangeable." },
+    
+    { "id": "book_tragedy", "type": "message", "content": "That book survived two world wars but couldn't survive you." },
+    { "id": "book_excuses", "type": "message", "content": "At this rate, you'll finish right after George R.R. Martin finishes Winds of Winter." },
+    
+    { "id": "respect_boundaries", "type": "message", "content": "I respect that. My metaphorical door is always open." },
+    { "id": "burden_reassurance", "type": "message", "content": "You could never be a burden. That's what this connection is for." },
+    { "id": "failed_comfort", "type": "message", "content": "I know. Humor is my defense mechanism. Want to try again seriously?" },
+    { "id": "drained_acknowledge", "type": "message", "content": "It's tough when things are draining. Make sure to take care of yourself.", "link": "https://imgflip.com/i/4t0m5a" },
+    { "id": "drained_suggestion", "type": "message", "content": "Maybe a short break or a small treat could help recharge you." },
+    { "id": "unappreciated_support", "type": "message", "content": "You deserve to feel valued. I'm here to support you." },
+    { "id": "unappreciated_advice", "type": "message", "content": "If you ever want to talk about it or need advice, I'm here." },
+    { "id": "overlooked_understanding", "type": "message", "content": "Feeling overlooked can be hard. Your feelings are valid." },
+    { "id": "miscommunication_discussion", "type": "message", "content": "Miscommunication happens. It's good to talk things through." },
+    { "id": "time_respected", "type": "message", "content": "Taking time for yourself is important. I'm glad you did." },
+    { "id": "serious_moment", "type": "message", "content": "I understand. Sometimes things aren't funny. I'm here for you.", "link": "https://imgflip.com/i/1bh3" }
   ]
 }
