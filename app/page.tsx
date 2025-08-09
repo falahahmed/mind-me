@@ -23,8 +23,6 @@ export default function Home() {
 
   const currentNode = data?.nodes.find((node: any) => node.id === currentId);
 
-  console.log("Current node: ", currentNode);
-
   const goNext = (next: string | string[]) => {
     if (Array.isArray(next)) {
       const randomIndex = Math.floor(Math.random() * next.length);
@@ -43,16 +41,16 @@ export default function Home() {
           layout='fill'
           objectFit='cover'
         />
-        <div className='absolute inset-0 flex items-center justify-center bg-black/50'>
+        <div className='absolute inset-0 flex items-center gap-4 justify-center bg-black/50'>
           <div className='text-center'>
             <h2 className='text-3xl font-bold'>You said you care. Now you wanna go back on what you said?</h2>
-            <p className='text-xl mt-4'>That <span className='text-red-600'>ain't happening</span> here!</p>
+            <p className='text-xl my-4'>That <span className='text-red-600'>ain't happening</span> here!</p>
             <button
               onClick={() => {
                 setLastQues(lastQues);
                 setIsBack(false);
               }}
-              className='w-full p-4 rounded-2xl border-2 hover:text-blue-800 transition-all duration-300 text-center font-medium'
+              className='w-full p-4 my-4 rounded-2xl border-2 hover:text-blue-800 transition-all duration-300 text-center font-medium'
             >
               <div className="flex items-center space-x-4">
                 <span className="text-lg w-full font-semibold">Let's continue</span>
@@ -60,10 +58,27 @@ export default function Home() {
             </button>
             <button
               onClick={() => {
-                goNext(lastQues!);
-                setIsBack(false);
+                document.title = "Error!"
+                document.body.style.backgroundImage = "url('/circums/sad.gif')";
+                document.body.style.backgroundSize = "cover";
+                document.body.style.backgroundRepeat = "no-repeat";
+                document.body.innerHTML = `
+                  <div class='flex items-center justify-center h-screen'>
+                    <div class='text-center bg-black/50 rounded-xl p-8'>
+                      <h1 class='text-blue-600 text-4xl font-bold'>Error 1010: I am SAD! </h1>
+                      <div class="flex justify-center w-full items-end" >
+                        <div class="grid grid-cols-2 content-end rounded-full w-20 h-20 border-0 border-black dark:border-white" >
+                          <div class="w-3.5 h-3.5 mx-auto mb-0 rounded-full bg-white" ></div>
+                          <div class="w-3.5 h-3.5 mx-auto mb-0 rounded-full bg-white" ></div>
+                          <div class="w-8 h-8 mb-0 mx-auto rounded-full col-span-2" >
+                            <div class="w-8 h-8 mx-auto rotate-290 mt-2 border-4 border-white mask-conic-from-40% mask-conic-to-40% rounded-full" ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>`;
               }}
-              className='w-full p-4 rounded-2xl border-2 hover:text-blue-800 transition-all duration-300 text-center font-medium'
+              className='w-full p-4 my-4 rounded-2xl border-2 hover:text-blue-800 transition-all duration-300 text-center font-medium'
             >
               <div className="flex items-center space-x-4">
                 <span className="text-lg w-full font-semibold">I don't care</span>
