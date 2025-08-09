@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "start",
+      "type": "question",
+      "content": "What’s the first thing you did after waking up?",
+      "options": [
+        { "text": "Checked my phone", "next": ["roast_phone", "motivate_phone", "nonsense_phone"] },
+        { "text": "Brushed my teeth", "next": ["roast_teeth", "motivate_teeth", "nonsense_teeth"] },
+        { "text": "Went back to sleep", "next": ["roast_sleep", "motivate_sleep", "nonsense_sleep"] }
+      ]
+    },
+
+    { "id": "roast_phone", "type": "message", "content": "Ah yes, doomscrolling — the breakfast of champions." },
+    { "id": "motivate_phone", "type": "message", "content": "Checking your phone early? That’s dedication… to staying informed." },
+    { "id": "nonsense_phone", "type": "message", "content": "Phones have more bacteria than toilet seats. Enjoy holding that." },
+
+    { "id": "roast_teeth", "type": "message", "content": "Brushed your teeth? Congrats on achieving the bare minimum today." },
+    { "id": "motivate_teeth", "type": "message", "content": "Clean teeth, clean mind. You’re unstoppable." },
+    { "id": "nonsense_teeth", "type": "message", "content": "Sharks grow new teeth forever. Feeling jealous yet?" },
+
+    { "id": "roast_sleep", "type": "message", "content": "Back to sleep? Bold strategy to avoid responsibilities." },
+    { "id": "motivate_sleep", "type": "message", "content": "Extra sleep? That’s self-care at expert level." },
+    { "id": "nonsense_sleep", "type": "message", "content": "Dolphins sleep with one eye open. Creepy, right?" },
+
+    {
+      "id": "q2",
+      "type": "question",
+      "content": "Pick a snack:",
+      "options": [
+        { "text": "Chips", "next": ["roast_chips", "motivate_chips", "nonsense_chips"] },
+        { "text": "Fruit", "next": ["roast_fruit", "motivate_fruit", "nonsense_fruit"] },
+        { "text": "Chocolate", "next": ["roast_chocolate", "motivate_chocolate", "nonsense_chocolate"] }
+      ]
+    },
+
+    { "id": "roast_chips", "type": "message", "content": "Chips? Just edible air with a crunch." },
+    { "id": "motivate_chips", "type": "message", "content": "Salty, crispy joy — you deserve it." },
+    { "id": "nonsense_chips", "type": "message", "content": "Some scientists once made a musical instrument out of chips." },
+
+    { "id": "roast_fruit", "type": "message", "content": "Fruit? Trying to convince yourself you’re healthy?" },
+    { "id": "motivate_fruit", "type": "message", "content": "Fruit is nature’s candy. Good choice." },
+    { "id": "nonsense_fruit", "type": "message", "content": "Bananas are berries but strawberries aren’t. Science is drunk." },
+
+    { "id": "roast_chocolate", "type": "message", "content": "Chocolate? Sweet escape from reality, huh?" },
+    { "id": "motivate_chocolate", "type": "message", "content": "Chocolate is proof the universe loves you." },
+    { "id": "nonsense_chocolate", "type": "message", "content": "White chocolate isn’t actually chocolate. It’s impostor sugar." },
+
+    {
+      "id": "q3",
+      "type": "question",
+      "content": "How’s your desk right now?",
+      "options": [
+        { "text": "Clean", "next": ["roast_clean", "motivate_clean", "nonsense_clean"] },
+        { "text": "Messy", "next": ["roast_messy", "motivate_messy", "nonsense_messy"] },
+        { "text": "I don’t have a desk", "next": ["roast_nodesk", "motivate_nodesk", "nonsense_nodesk"] }
+      ]
+    },
+
+    { "id": "roast_clean", "type": "message", "content": "Clean desk? Are you okay? Blink twice if it’s a cry for help." },
+    { "id": "motivate_clean", "type": "message", "content": "A clean desk means a clean mind. You’re on fire." },
+    { "id": "nonsense_clean", "type": "message", "content": "In Japan, there’s a museum dedicated to dust. Maybe they’d like your desk’s leftovers." },
+
+    { "id": "roast_messy", "type": "message", "content": "Messy desk? That’s not creativity, that’s chaos." },
+    { "id": "motivate_messy", "type": "message", "content": "Messy desk, genius brain. Einstein vibes." },
+    { "id": "nonsense_messy", "type": "message", "content": "A study once linked messy desks to eating more cookies. Coincidence? No." },
+
+    { "id": "roast_nodesk", "type": "message", "content": "No desk? So you’re just balancing life on your lap now?" },
+    { "id": "motivate_nodesk", "type": "message", "content": "No desk, no limits. Freedom is yours." },
+    { "id": "nonsense_nodesk", "type": "message", "content": "In medieval times, people wrote while lying on their stomachs. Comfort over posture." }
+  ]
+}

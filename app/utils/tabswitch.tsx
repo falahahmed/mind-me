@@ -25,7 +25,7 @@ export const useTabTitle = (hiddenTitle: string, emoji: string) => {
   }, [hiddenTitle]);
 };
 
-const createFavicon = (emoji: string) => {
+export const createFavicon = (emoji: string) => {
   const canvas = document.createElement('canvas');
   canvas.width = 32;
   canvas.height = 32;
@@ -39,7 +39,7 @@ const createFavicon = (emoji: string) => {
   return canvas.toDataURL();
 };
 
-const changeFavicon = (iconUrl: string) => {
+export const changeFavicon = (iconUrl: string) => {
   let favicon = document.querySelector("link[rel*='icon']") as HTMLLinkElement | null;
   
   if (!favicon) {
