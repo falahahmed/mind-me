@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { CheckCircle, ArrowRight, RotateCcw, Trophy } from 'lucide-react';
+import { useTabTitle } from './utils/tabswitch';
 
 interface Question {
   id: number;
@@ -44,6 +45,8 @@ const questions: Question[] = [
 ];
 
 export default function Home() {
+
+  useTabTitle("Don't care, do you?😒", "🥺");
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<number[]>([]);
@@ -93,7 +96,6 @@ export default function Home() {
             <div className="mb-8">
 
               {/*Heading  */}
-              <h1 className="text-4xl font-bold text-white mb-4"></h1>
             </div>
 
             <div className="space-y-4 mb-8">

@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": "start",
+      "type": "question",
+      "content": "Why are you here now? You ignored me for ages.",
+      "options": [
+        { "text": "I was busy", "next": "busy_1" },
+        { "text": "I missed you", "next": "missed_1" },
+        { "text": "Accidentally clicked", "next": "accident_1" }
+      ]
+    },
+
+    {
+      "id": "busy_1",
+      "type": "message",
+      "content": "Busy? Oh right, scrolling memes counts as work now."
+    },
+
+    {
+      "id": "missed_1",
+      "type": "question",
+      "content": "Aww. Flattery won't get you free Wi-Fi. Why no calls?",
+      "options": [
+        { "text": "Phone broke", "next": "roast_phone" },
+        { "text": "No reason", "next": "roast_lazy" }
+      ]
+    },
+
+    {
+      "id": "accident_1",
+      "type": "message",
+      "content": "So I’m just your accidental tab now? Rude."
+    },
+
+    {
+      "id": "roast_phone",
+      "type": "message",
+      "content": "Phone broke? Yeah, like my trust in you."
+    },
+
+    {
+      "id": "roast_lazy",
+      "type": "message",
+      "content": "No reason? Finally, some honesty."
+    }
+  ],
+
+  "library": {
+    "generic_roasts": [
+      "That's the laziest excuse I've heard today.",
+      "Oh wow, originality just died.",
+      "Tell me more lies, I collect them."
+    ]
+  }
+}
