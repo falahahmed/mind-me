@@ -4,7 +4,7 @@
 # Mind Me 🎯
 
 
-## A website that calls for our attention
+## A website that calls for your attention
 ### Team Name: Nakama
 
 
@@ -13,7 +13,7 @@
 - Member 2: Bantupalli Prudvi John - SOE Cusat
 
 ### Project Description
-The site asks some questions and gives response based on that. sometimes fun, sometimes helping :)
+The site asks some questions and gives response based on that. Sometimes fun, sometimes helpful :)
 
 ### The Problem (that doesn't exist)
 We are getting bored. Well, we were!
